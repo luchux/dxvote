@@ -225,17 +225,19 @@ const ProposalsPage = observer(() => {
           </ProposalsFilter>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}
-        >
-          <ActiveButton route={`/${networkName}/new`}>
-            + New Proposal
-          </ActiveButton>
-        </div>
+        {account && (
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+            }}
+          >
+            <ActiveButton route={`/${networkName}/new`}>
+              + New Proposal
+            </ActiveButton>
+          </div>
+        )}
       </ProposalTableHeaderActions>
       <ProposalTableHeaderWrapper>
         <TableHeader width="35%" align="left">
